@@ -1,0 +1,34 @@
+/* SF Pro Display */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/Inter-Light.woff2') format('woff2'),
+    url('assets/fonts/Inter-Light.ttf') format('ttf'),
+    url('assets/fonts/Inter-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('assets/fonts/Inter-Regular.woff2') format('woff2'),
+    url('assets/fonts/Inter-Regular.ttf') format('ttf'),
+    url('assets/fonts/Inter-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/fonts/Inter-Medium.woff2') format('woff2'),
+    url('assets/fonts/Inter-Medium.ttf') format('ttf'),
+    url('assets/fonts/Inter-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/Inter-Semibold.woff2') format('woff2'),
+    url('assets/fonts/Inter-Semibold.ttf') format('ttf'),
+    url('assets/fonts/Inter-Semibold.woff') format('woff');
+}

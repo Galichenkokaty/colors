@@ -1,0 +1,108 @@
+.header__bg{
+    width: 100%;
+}
+
+.header__bg-img{
+    padding-bottom: 29.166666666666668%;
+}
+
+.header__carusel-nav .swiper-button-next:after{
+    content: '';
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='42' viewBox='0 0 22 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 41L21 21L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-size: 1.25rem 2.5rem;
+    width: 1.25rem;
+    height:  2.5rem;
+    position: absolute;
+}
+.header__carusel-nav .swiper-button-prev:after{
+    content: '';
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='42' viewBox='0 0 22 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 41L21 21L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    transform: rotate(180deg);
+    background-size: 1.25rem 2.5rem;
+    width: 1.25rem;
+    height:  2.5rem;
+    position: absolute;
+}
+
+.header__carusel-nav  .swiper-button-prev, .header__carusel-nav  .swiper-button-next {
+    top: 68%;
+}
+
+.header__carusel-pagination .swiper-pagination-bullet{
+    width: 0.375rem;
+    height: 0.375rem;
+}
+
+.header__carusel-pagination{
+    padding: 0.8125rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: fit-content !important;
+    left: auto !important;
+    bottom: 2.4375rem !important;
+    border-radius: 1rem;
+    /* height: 2rem; */
+    display: flex;
+}
+
+.header__carusel-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white;
+}
+
+.header{
+    position: relative;
+}
+
+.header__text{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    gap: 1.5rem;
+}
+
+.header__title{
+    color: white;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 88%;
+}
+
+.header__desc{
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 130%;
+}
+
+.header__carusel{
+    position: absolute;
+    height: 100%;
+    max-width: 60rem;
+    width: 100%;
+}
+
+.header__title.--mob{
+    display: none;
+    color: black;
+    font-size: 2.25rem;
+    margin-top: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header__carusel, .header__bg{
+        display: none;
+    }
+    
+    .header__title.--mob{
+        display: block;
+    }
+
+    .header{
+        justify-content: start;
+        padding: 0 1.5rem;
+
+    }
+}

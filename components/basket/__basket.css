@@ -1,0 +1,231 @@
+.basket{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 37.5rem;
+    background-color: white;
+    padding: 2.5rem;
+    gap: 5rem;
+    grid-template-rows: 3rem auto 3.5rem;
+    transform: translateX(38rem);
+    transition: all .24s ease-in-out;
+}
+
+.basket.--is-open{
+    transform: translateX(0);
+}
+
+
+.basket__head{
+    width: 100%;
+}
+
+.basket__title{
+    font-size: 1.875rem;
+    line-height: 88%;
+    letter-spacing: -1px;
+}
+
+.basket__close{
+    width: 3rem;
+    position: relative;
+    height: 3rem;
+    border-radius: 50%;
+    transition: all .24s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.basket__close:hover{
+    cursor: pointer;
+}
+
+.basket__close:hover:after, .basket__close:hover:before{
+    border: 1px solid var(--color__fill-1);
+}
+
+.basket__delete:hover:after, .basket__delete:hover:before{
+    border: 1px solid var(--color__fill-1);
+    cursor: pointer;
+}
+
+.basket__close:after, .basket__close:before, .basket__delete:after, .basket__delete:before{
+    content: '';
+    position: absolute;
+    width: 1.125rem;
+    border: 1px solid black;
+    transition: all .24s ease-in-out;
+}
+
+.basket__close:after, .basket__delete:after{
+    transform: rotate(45deg);
+}
+
+.basket__close::before, .basket__delete:before{
+    transform: rotate(-45deg);
+}
+
+.basket__delete{
+    opacity: .2;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.basket__body{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    padding-right: 0.5rem;
+}
+.basket__body::-webkit-scrollbar {
+    width: .375rem !important;
+    border-radius: .375rem !important;
+}
+
+.basket__body::-webkit-scrollbar-thumb {
+    background: var(--color__fill-1) !important;
+    border-radius: .375rem !important;
+}
+
+.basket__body-head{
+    width: 100%;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    padding-bottom: 0.625rem;
+}
+
+.basket__footer{
+    width: 100%;
+    justify-self: end;
+}
+
+.basket__body-cards{
+    width: 100%;
+}
+
+.basket__body-card{
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+    padding-bottom: 0.625rem;
+}
+
+.basket__body-card .catalog__card-info{
+    padding: .875rem 0;
+}
+
+.basket__body-card .catalog__card-thumb{
+    min-width: 6rem;
+    width: 6rem;
+}
+
+.basket__body-card .catalog__card-info{
+    max-width: 10.3125rem;
+}
+
+.basket__button{
+    width: 15rem;
+    height: 3.5rem;
+    background-color: var(--color__fill-1);
+    border: none;
+    text-transform: uppercase;
+    transform: scale(1);
+    font-size: .75rem;
+    transition: all .24s ease-in-out;
+}
+
+.basket__price span:nth-child(2){
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.basket__button:hover{
+    cursor: pointer;
+}
+
+.basket__button:active, .basket__card-count-btn:active{
+    transform: scale(.9);
+    filter: brightness(0.95);
+}
+
+.basket__card-count{
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.basket__card-count-input{
+    border: none;
+    max-width: 3rem;
+    padding: 0 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.--disabled.basket__card-count-btn {
+    pointer-events: none;
+    opacity: .4;
+}
+
+.basket__card-count-btn {
+    padding: .25rem .75rem;
+    border-radius: .25rem;
+    border: none;
+    transition: all .24s ease-in-out;
+}
+
+.basket__card-count-btn:hover{
+    background-color: var(--color__fill-1);
+    cursor: pointer;
+}
+
+.basket__card-block{
+    height: 100%;
+    flex-wrap: nowrap;
+    gap: .5rem;
+}
+
+.basket__card-block:nth-child(2){
+    gap: 2.3125rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .basket{
+        width: 100%;
+        transform: translateX(100%);
+        padding: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 425px) {    
+    .basket__body-card .catalog__card-thumb {
+        min-width: 5rem;
+        width: 5rem;
+    }
+
+    .basket__card-block {
+        height: unset;
+        width: 100%;
+    }
+
+    .basket__card-block:nth-child(2) {
+        justify-content: space-between;
+    }
+
+
+    .basket__body-card{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .basket{
+        gap: 3rem;
+    }
+
+}

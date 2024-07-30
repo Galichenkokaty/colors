@@ -1,0 +1,53 @@
+.filter__element-toggle{
+    width: 2.25rem;
+    height: 1.375rem;
+    position: relative;
+    padding: 0.4375rem;
+    transition: all .24s ease-in-out;
+}
+
+.filter__element-toggle:hover{
+    cursor: pointer;
+}
+
+.filter__element-toggle-input{
+    display: none;
+}
+
+.filter__element-toggle-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2.5rem;
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.filter__element-toggle-circle{
+    border-radius: 50%;
+    background-color: black;
+    width: .5rem;
+    height: .5rem;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: all .24s ease-in-out;
+}
+
+.filter__element-toggle-input:checked + .filter__element-toggle-bg{
+    background-color: var(--color__fill-1);
+}
+
+.filter__element-toggle-input:checked + .filter__element-toggle-bg + .filter__element-toggle-circle{
+    transform: translate(.875rem);
+}
+
+.filter__element{
+    align-items: center;
+}
+
+.filter__element-text{
+    text-transform: uppercase;
+    font-size: .75rem;
+}
